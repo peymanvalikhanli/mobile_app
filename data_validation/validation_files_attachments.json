@@ -1,0 +1,5 @@
+{ "":"" ,"file_id" : { "Type" : "int(11)" , "isNull" : "NO" , "Key" : "PRI" , "Default" : "" , "Extre" : ""}
+            ,"attachment_id" : { "Type" : "int(11)" , "isNull" : "NO" , "Key" : "PRI" , "Default" : "" , "Extre" : ""}
+            ,"created_by" : { "Type" : "int(11)" , "isNull" : "NO" , "Key" : "" , "Default" : "0" , "Extre" : ""}
+            ,"creationDate" : { "Type" : "timestamp" , "isNull" : "NO" , "Key" : "" , "Default" : "CURRENT_TIMESTAMP" , "Extre" : ""}
+            }

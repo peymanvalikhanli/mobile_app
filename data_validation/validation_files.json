@@ -1,0 +1,59 @@
+{
+  "": "",
+  "ID": {
+    "Type": "int(11)",
+    "isNull": "NO",
+    "Key": "PRI",
+    "Default": "",
+    "Extre": "auto_increment"
+  },
+  "user_id": {
+    "Type": "int(11)",
+    "isNull": "NO",
+    "Key": "",
+    "Default": "",
+    "Extre": ""
+  },
+  "type": {
+    "Type": "int(11)",
+    "isNull": "NO",
+    "Key": "",
+    "Default": "",
+    "Extre": ""
+  },
+  "title": {
+    "Type": "varchar(50)",
+    "isNull": "NO",
+    "Key": "",
+    "Default": "",
+    "Extre": ""
+  },
+  "comment": {
+    "Type": "text",
+    "isNull": "NO",
+    "Key": "",
+    "Default": "",
+    "Extre": ""
+  },
+  "date": {
+    "Type": "timestamp",
+    "isNull": "NO",
+    "Key": "",
+    "Default": "CURRENT_TIMESTAMP",
+    "Extre": ""
+  },
+  "created_by": {
+    "Type": "int(11)",
+    "isNull": "NO",
+    "Key": "",
+    "Default": "",
+    "Extre": ""
+  },
+  "creationDate": {
+    "Type": "timestamp",
+    "isNull": "NO",
+    "Key": "",
+    "Default": "CURRENT_TIMESTAMP",
+    "Extre": ""
+  }
+}

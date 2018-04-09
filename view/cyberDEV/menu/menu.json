@@ -1,0 +1,7 @@
+{
+  "dashboar":{"name":"Dashboard","icon":"glyphicon glyphicon-home","url":"#dashboard"},
+  "users":{"name":"Users","icon":"glyphicon glyphicon-user","url":"#users"},
+  "messages":{"name":"Messages","icon":"glyphicon glyphicon-comment","url":"#messages"},
+  "files":{"name":"Files","icon":"glyphicon glyphicon-folder-open","url":"#file"},
+  "setting":{"name":"Setting","icon":"glyphicon glyphicon-wrench","url":"#setting"}
+}

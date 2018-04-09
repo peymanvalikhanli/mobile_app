@@ -1,0 +1,7 @@
+{ "":"" ,"ID" : { "Type" : "int(11)" , "isNull" : "NO" , "Key" : "PRI" , "Default" : "" , "Extre" : "auto_increment"}
+            ,"user_id" : { "Type" : "int(11)" , "isNull" : "NO" , "Key" : "" , "Default" : "" , "Extre" : ""}
+            ,"Lat" : { "Type" : "varchar(10)" , "isNull" : "NO" , "Key" : "" , "Default" : "" , "Extre" : ""}
+            ,"Lng" : { "Type" : "varchar(10)" , "isNull" : "NO" , "Key" : "" , "Default" : "" , "Extre" : ""}
+            ,"created_by" : { "Type" : "int(11)" , "isNull" : "NO" , "Key" : "" , "Default" : "" , "Extre" : ""}
+            ,"creationDate" : { "Type" : "timestamp" , "isNull" : "NO" , "Key" : "" , "Default" : "CURRENT_TIMESTAMP" , "Extre" : ""}
+            }

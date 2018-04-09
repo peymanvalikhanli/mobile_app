@@ -1,0 +1,5 @@
+{ "":"" ,"ID" : { "Type" : "int(11)" , "isNull" : "NO" , "Key" : "UNI" , "Default" : "" , "Extre" : "auto_increment"}
+            ,"username" : { "Type" : "varchar(150)" , "isNull" : "NO" , "Key" : "PRI" , "Default" : "" , "Extre" : ""}
+            ,"pass" : { "Type" : "varchar(150)" , "isNull" : "NO" , "Key" : "" , "Default" : "" , "Extre" : ""}
+            ,"creationDate" : { "Type" : "timestamp" , "isNull" : "NO" , "Key" : "" , "Default" : "CURRENT_TIMESTAMP" , "Extre" : ""}
+            }

@@ -1,0 +1,9 @@
+{ "":"" ,"ID" : { "Type" : "int(11)" , "isNull" : "NO" , "Key" : "PRI" , "Default" : "" , "Extre" : "auto_increment"}
+            ,"user_id" : { "Type" : "int(11)" , "isNull" : "NO" , "Key" : "" , "Default" : "" , "Extre" : ""}
+            ,"title" : { "Type" : "varchar(50)" , "isNull" : "NO" , "Key" : "" , "Default" : "" , "Extre" : ""}
+            ,"text" : { "Type" : "text" , "isNull" : "NO" , "Key" : "" , "Default" : "" , "Extre" : ""}
+            ,"replay" : { "Type" : "int(11)" , "isNull" : "NO" , "Key" : "" , "Default" : "" , "Extre" : ""}
+            ,"replay_date" : { "Type" : "timestamp" , "isNull" : "NO" , "Key" : "" , "Default" : "CURRENT_TIMESTAMP" , "Extre" : "on update CURRENT_TIMESTAMP"}
+            ,"created_by" : { "Type" : "int(11)" , "isNull" : "NO" , "Key" : "" , "Default" : "0" , "Extre" : ""}
+            ,"creationDate" : { "Type" : "timestamp" , "isNull" : "NO" , "Key" : "" , "Default" : "CURRENT_TIMESTAMP" , "Extre" : ""}
+            }
