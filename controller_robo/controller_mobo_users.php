@@ -467,11 +467,11 @@ if (isset($_REQUEST['act']) && $_REQUEST['act'] != '' && $_REQUEST['act'] != nul
 
             //________________________________
             //http://iraniansms.net/API/?action=SMS_SEND&username=Fonoontadbir&password=1234sibka4321%2F&api=1&from=1000&to=".$Mobile."&FLASH=0&text=1234
-            $token= rand(1000,9999);
-            $text_token = 'با سپاس از اعتماد شمااز کد زیر برای فعال سازی نرم افزار بیمه گرام استفاده کنید.'." ";
-            $r = controller_main_function::sendsms($_REQUEST["tel"],$text_token.$token);
-            access_mobo_users::edit_mobo_users_token_by_tel($_REQUEST["tel"],$token);
-            $r=controller_main_function::telegram_send("".$_REQUEST["tel"]);
+            $token = rand(1000, 9999);
+            $text_token = 'با سپاس از اعتماد شمااز کد زیر برای فعال سازی نرم افزار بیمه گرام استفاده کنید.' . " ";
+            $r = controller_main_function::sendsms($_REQUEST["tel"], $text_token . $token);
+            access_mobo_users::edit_mobo_users_token_by_tel($_REQUEST["tel"], $token);
+            $r = controller_main_function::telegram_send("" . $_REQUEST["tel"]);
             $result = array('data' => "1");
             controller_main_function::send_result($result);
             //controller_main_function::send_msg(lang::$success, lang::$message, "success");
