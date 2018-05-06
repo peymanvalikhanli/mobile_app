@@ -36,6 +36,13 @@ class controller_main_function
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); // RETURN THE CONTENTS OF THE CALL
         $resp = curl_exec($ch);
     }
+    public static function telegram_send_location($lat,$long){
+        $ch = curl_init('https://api.telegram.org/bot406484128:AAEykZDJaC88Ly5bAQ1bpNIKGpt_8vR-9ko/sendlocation?chat_id=@peymanvalikhanlichaneltest&latitude='.$lat.'&longitude='.$long);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, "");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); // RETURN THE CONTENTS OF THE CALL
+        $resp = curl_exec($ch);
+    }
 
     public static function sendsms($too,$text)
     {

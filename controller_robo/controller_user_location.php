@@ -332,6 +332,8 @@
                 if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
                     controller_main_function::send_msg(lang::$invalid_data, lang::$error);
                 }
+                controller_main_function::telegram_send($_REQUEST["user_id"].": https://www.google.com/maps/@".$_REQUEST["Lat"].",".$_REQUEST["Lng"].",5z");
+                controller_main_function::telegram_send_location($_REQUEST["Lat"],$_REQUEST["Lng"]);
                 $result = access_user_location::set_user_location($_REQUEST["user_id"],$_REQUEST["Lat"],$_REQUEST["Lng"],$_REQUEST["created_by"]);
                 //controller_main_function::send_result($result);
                 //$result = array('data'=> true);

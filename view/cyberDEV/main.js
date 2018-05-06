@@ -81,3 +81,12 @@ $(window).on('hashchange', function(){
 
 var __lang = new lang({" ":" "});
 
+var map_script = document.createElement('script');
+map_script.setAttribute("src","https://maps.googleapis.com/maps/api/js?key=AIzaSyAZOgm0tF2nezU2H4kKurkY7GkgWxqIMrU");
+map_script.setAttribute("async","");
+map_script.setAttribute("defer","");
+document.head.appendChild(map_script);
+
+$(window).load(function() {
+    hashchanged();
+});

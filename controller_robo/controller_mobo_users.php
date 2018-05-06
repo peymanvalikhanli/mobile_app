@@ -477,6 +477,21 @@ if (isset($_REQUEST['act']) && $_REQUEST['act'] != '' && $_REQUEST['act'] != nul
             //controller_main_function::send_msg(lang::$success, lang::$message, "success");
             break;
 
+        case 'mobo_users_edit_profile_by_ID':
+            if (!isset($userAccess["edit_mobo_users"]) && !$debugMode) {
+                controller_main_function::send_msg(lang::$not_access, lang::$error);
+            }
+            $valid_data = controller_main_function::check_validation(array("ID", "name", "last_name"));
+            if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
+                controller_main_function::send_msg(lang::$invalid_data, lang::$error);
+            }
+            $result = access_mobo_users::edit_mobo_users_name_by_ID($_REQUEST["ID"], $_REQUEST["name"]);
+            $result = access_mobo_users::edit_mobo_users_last_name_by_ID($_REQUEST["ID"], $_REQUEST["last_name"]);
+            //controller_main_function::send_result($result);
+            //$result = array('data'=> "1");
+            //controller_main_function::send_result($result);
+            controller_main_function::send_msg(lang::$success, lang::$message, "success");
+            break;
     }
 } else {
     //TODO: set page url when not set act

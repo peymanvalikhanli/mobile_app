@@ -1,5 +1,5 @@
 var ajax = {url: "controller_robo/controller_menu.php", data: {}};
-ajax.get_data = function (e, a) {
+ajax.get_data = function (e, a ,b) {
     if (void 0 == a || null == a)switch (e.act) {
         case"login":
             switch (e.Result) {
@@ -32,7 +32,9 @@ ajax.get_data = function (e, a) {
             break;
         case"Error":
             console.log(e)
-    } else a(e)
+    } else if(void 0 == b || null == b)
+        a(e)
+    else a(e,b)
 }, ajax.sender_data = function (e) {
     var a = new Date, o = this.url + "?killcatch=" + a.getMilliseconds() + "0" + a.getSeconds(), s = {};
     if (null != e) {
@@ -102,6 +104,17 @@ ajax.get_data = function (e, a) {
         data: a,
         success: function (e) {
             ajax.get_data(e, o)
+        }
+    })
+},  ajax.sender_data_json_by_url_callback_sync = function (e, a, o, s,call_back) {
+    var r = new Date;
+    e = e + "?killcatch=" + r.getMilliseconds() + "0" + r.getSeconds(), (null == s || void 0 == s) && (s = "GET"), $.ajax({
+        url: e,
+        type: s,
+        dataType: "json",
+        data: a,
+        success: function (e) {
+            ajax.get_data(e, o,call_back)
         }
     })
 }, ajax.cllback_getJSON = function (e, a) {
