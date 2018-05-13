@@ -105,6 +105,22 @@ mobo_users_connection.get_by_ID = function (ID) {
     };
     ajax.sender_data_json_by_url_callback(mobo_users_connection.controller_url, param, mobo_users_connection.get_by_ID_call_back, "POST");
 };
+mobo_users_connection.get_by_ID_call_back_sync = function (data , o) {
+    //TODO: set code after the server response
+    if (mobo_users_connection.debug_mode) {
+        console.log(data);
+    }
+    mobo_users_connection.data = data;
+    if (void 0!=o && o!= undefined)
+        o(data);
+};
+mobo_users_connection.get_by_ID_sync = function (ID , o) {
+    var param = {
+        "act": "mobo_users_get_by_ID",
+        ID: ID
+    };
+    ajax.sender_data_json_by_url_callback_sync(mobo_users_connection.controller_url, param, mobo_users_connection.get_by_ID_call_back_sync, "POST",o);
+};
 
 mobo_users_connection.get_by_ID_grid = function (ID) {
     var param = {

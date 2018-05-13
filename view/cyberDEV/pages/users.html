@@ -29,7 +29,8 @@
 
     $('#data_table tbody').on( 'click', 'button', function () {
     var data = t.row( $(this).parents('tr') ).data();
-    alert( "name is "+ data[1] +" "+ data[ 2 ] );
+    //alert( "id is "+ data[0] +" "+ data[ 2 ] );
+    location.replace("#profile?id="+data[0]);
     } );
 
     if(mobo_users_connection.data!=null){

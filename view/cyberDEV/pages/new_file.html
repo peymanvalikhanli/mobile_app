@@ -2,10 +2,41 @@
 
     var header = get_elm("page_header");
     var file_id = getParameterByName("id");
+
+    function read_data(data){
+    console.log(data);
+    var txt_user = get_elm("user");
+    var txt_title = get_elm("title");
+    var txt_text = get_elm("text_file");
+    var btn_create = get_elm("btn_create");
+
+    btn_create.style.visibility="hidden";
+
+    txt_title.value = data[0].title;
+    txt_text.value= data[0].comment;
+
+
+    $.each(mobo_users_connection.data, function(i, v) {
+    if (v.ID.trim() == data[0].user_id.trim()) {
+    txt_user.value=v.tel;
+    return;
+    }
+    });
+
+
+
+    }
+
+    function get_detail_file(){
+       // alert("data file");
+    setTimeout(function(){files_connection.get_by_ID_sync(file_id,read_data);},500);
+    }
+
     if(file_id == null){
     header.innerHTML="New file";
     }else{
     header.innerHTML="Detail file";
+    get_detail_file();
     }
     var user_id = null;
     function btn_send_on_Click(){
@@ -110,7 +141,7 @@
             <div class="form-group">
                 <label class="col-md-2 control-label" for="textarea"></label>
                 <div class="col-md-10">
-                    <button class="btn btn-success" onclick="btn_send_on_Click()"><span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;Create</button>
+                    <button id="btn_create"  class="btn btn-success" onclick="btn_send_on_Click()"><span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;Create</button>
                 </div>
             </div>
 
